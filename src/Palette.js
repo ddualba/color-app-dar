@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
-import './Palette.css';
-import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import './Palette.css';
+import Slider from 'rc-slider';
 
 export class Palette extends Component {
 	constructor(props) {
@@ -26,13 +26,15 @@ export class Palette extends Component {
 		));
 		return (
 			<div className="Palette">
-				<Slider
-					defaultValue={level}
-					min={100}
-					max={900}
-					step={100}
-					onAfterChange={this.changeLevel}
-				/>
+				<div className="slider">
+					<Slider
+						defaultValue={level}
+						min={100}
+						max={900}
+						step={100}
+						onAfterChange={this.changeLevel}
+					/>
+				</div>
 				{/* Navbar goes here */}
 				<div className="Palette-colors">
 					{/* bunch of color boxes */}
