@@ -21,7 +21,7 @@ export class SingleColorPalette extends Component {
 
 		for (let key in allColors) {
 			shades = shades.concat(
-				allColors[key].filter((color) => color.id == colorToFilterBy)
+				allColors[key].filter((color) => color.id === colorToFilterBy)
 			);
 		}
 		//return all shades of given color. Slice removes shade 50, which is not needed
